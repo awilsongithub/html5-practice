@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>HTML5 Practice</title>
+    <link rel="stylesheet" href="main.css">
+
+  </head>
+  <body>
+
+    <header>
+      <div class='container'>
+        <h1>HTML5 Practice Page</h1>
+        <h4>This page is ugly and implements new HTML5 features.</h4>
+      </div>
+    </header>
+
+    <nav>
+      <div class='container'>
+      </div>
+    </nav>
+
+    <main>
+      <div class='container'>
+
+        <section>
+
+          <!-- ===============================
+                     NEW ELEMENTS
+          ===================================== -->
+
+          <h2>HTML5 New Elements</h2>
+
+          <figure>
+            <h3>Figure</h3>
+            <img src="https://seravo.fi/wp-content/uploads/2013/12/HTML5logo.png" alt="">
+            <figcaption>This is a <code>&lt; figcaption &gt;</code></figcaption>
+          </figure>
+
+          <aside role='complementary'>
+            <h3>Aside</h3>
+            <p>aside tag content complements main content</p>
+          </aside>
+
+          <h3>Details</h3>
+          <details>
+            <summary>This is a details element</summary>
+            <p>Details elements can be used to create an interactive widget that the user can open and close. Unseen unless <code>open</code> attribute set </p>
+          </details>
+
+          <h3>Dialog</h3>
+          <button onclick='toggleDialogElement()'>Show Dialog</button>
+          <dialog id='d1'>
+            <h4>This is an open dialog</h4>
+            <p>It will show when it has an <strong>open</strong> attribute</p>
+            <p class='link-alike' onclick='toggleDialogElement()'>close</p>
+          </dialog>
+
+          <h3>Article</h3>
+          <article>
+            <h3>This is an <code>&lt;article&gt;</code></h3>
+            <p>It has <mark>marked/highlighted words</mark> to do with main content</p>
+          </article>
+
+
+          <!-- ===============================
+            NEW FORM ELEMENTS AND INPUT TYPES
+          ===================================== -->
+
+          <h2>New Form Elements and Input Types</h2>
+
+          <h3>Time</h3>
+          <p>renders normally but is machine-readable for calendar, search engines etc. <time datetime='2018-12-5 14:00'>2:00pm</time></p>
+
+          <h3>Datalist</h3>
+          <p>input specifies datalist of suggestions with its list attribute. User can enter anything but will see and can click on a suggestion if they wish.</p>
+          <input list='supers'>
+          <datalist id='supers'>
+            <option value="bathead">
+            <option value="birdneck">
+            <option value="superbrick">
+          </datalist>
+          <input type="submit">
+
+          <h3>Meter & Progress, Range and Output</h3>
+          <p>This is a meter.</p>
+          <meter value='2' min='0' max='10'>Show this if not supported</meter>
+          <meter value='7' min='0' max='10' high='5'>Show this if not supported</meter>
+
+          <p>This is a progress element</p>
+          <progress value='50' max='100'>show this if not supported</progress>
+          <button onClick='increaseProgress()'>increase progress</button>
+
+
+          <!-- ===============================
+                    NEW INPUT TYPES
+          ===================================== -->
+
+          <h3>New Input Types</h3>
+          <p>Note, quotes no longer needed for attr values</p>
+
+            <form id='newInputTypes' oninput='myOutput.value=parseInt(rangerRick.value)'>
+
+              Input type range min 0, max 100, value 50
+              <input id='rangerRick' type="range" min='0' max='100' value='50'>
+              Output name='myOutput' for='inputname'
+              <output name='myOutput' for='rangerRick'></output>
+              color ()
+              <input type=color required>
+              date
+              <input type="date">
+              datetime
+              <input type="datetime">
+              datetime-local
+              <input type="datetime-local">
+              email<input type="email">
+              month<input type="month">
+              number<input type="number">
+              Range min 4, max 8, value 6. no output. could do it with onChange fn ...
+              <input id='height-picker' type="range" value='6' min='4' max='8'>
+              text<input type="text">
+              search<input type="search">
+              tel<input type="tel">
+              time<input type="time">
+              url<input type="url">
+              week<input type="week">
+              <input type="submit">Will validate ie @ in email ...
+
+            </form>
+        </section>
+
+        <section>
+          <h2>New Media Elements</h2>
+
+          <h3>audio and source</h3>
+          <p>audio els need src, and controls attributes. formats: mp3, wav, ogg. source tag specifies each of multiple src files</p>
+          <audio controls >
+            <source src="beat.mp3" type='audio/mpeg'>
+            <source src="beat.wav" type='audio/wav'>
+            you browser doesnt support audio elements
+          </audio>
+
+          <h3>embed with src='x.gif'</h3>
+          <embed src="https://media0.giphy.com/media/T8Dhl1KPyzRqU/giphy.gif?cid=3640f6095c0c43c86d532e6e4105074a" alt="frustrated customer service GIF" style="width: 100px; height: 75px; left: 0px; top: 0px; opacity: 1;" />
+
+          <h3>video and (subtitle, caption) track</h3>
+
+          <video width='200' height='150' controls src="walking.mp4">browser !likes video tags</video>
+
+
+
+        </section>
+
+      </div> <!-- end main container div -->
+    </main>
+
+
+    <footer>
+      Copyright 2018
+    </footer>
+
+    <script type='text/javascript' src='main.js'></script>
+  </body>
+</html>

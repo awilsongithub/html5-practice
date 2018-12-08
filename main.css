@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+/* To ensure that the HTML 5 regions display properly in older browsers */
+header, nav, main, footer, article, section, aside {
+   display:block;
+}
+footer, header {
+  background: black;
+  color: white;
+}
+header {
+  padding: 20px 10px;
+}
+header h1, header h4 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+body code {
+  background: #cdcbd6;
+  border-radius: 2px;
+  padding: 5px 12px;
+}
+img {
+  width:100px;
+}
+figure {
+  margin-left: 0;
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
+}
+figure > h2 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+figcaption {
+  padding: 10px 10px;
+}
+details {
+  padding: 10px;
+}
+summary h2 {
+  display: inline-block;
+}
+.link-alike {
+  color: #0052CC;
+  cursor: pointer;
+}
+.link-alike:hover {
+  text-decoration: underline;
+}
+/* h3 {
+  background: #d3d3d370;
+} */
+h3 {
+  padding: 10px 0;
+  background: lightgrey;
+}
+h2 {
+  background: black;
+  color: white;
+  padding: 10px 0;
+}
+
+form#newInputTypes input,
+form#newInputTypes output {
+  display: block;
+}
